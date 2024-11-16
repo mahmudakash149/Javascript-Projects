@@ -35,7 +35,7 @@ const updateExchangeRate = async () => {
     const data = await response.json();
     const rate = data.rates[toCurr.value];
 
-    let finalAmount = amtVal * rate;
+    let finalAmount = (amtVal * rate).toFixed(5);
     msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
   } catch (error) {
     console.error("Error fetching exchange rate:", error);
@@ -52,7 +52,7 @@ const updateFlag = (element) => {
 };
 
 btn.addEventListener("click", (evt) => {
-  //evt.preventDefault();
+  evt.preventDefault();
   updateExchangeRate();
 });
 
