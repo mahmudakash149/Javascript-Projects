@@ -71,6 +71,8 @@
   
   .msg {
     margin: 2rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
   }
   
   form button {
@@ -80,3 +82,8 @@
     font-size: 1.15rem;
     cursor: pointer;
   }
+
+  .container h2 {
+    text-align: center;
+  }
+  
